@@ -30,6 +30,11 @@ app.get("/posts", (req, res) => {
     res.render("index.ejs", {posts});
 });
 
+//add new form to create new post
+app.get("/posts/new", (req, res) => {
+    res.render("new.ejs");
+})
+
 app.get("/posts/new", (req, res) => {
     res.render("new.ejs");
 });
