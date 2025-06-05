@@ -39,7 +39,8 @@ app.get("/posts/new", (req, res) => {
 app.post("/posts", (req, res) => {
     let {username, content} = req.body;
     posts.push({username, content});
-    res.send("Post is working !");
+    // redirect the url to the posts path
+    res.redirect("\posts"); // it use get request
 });
 
 
